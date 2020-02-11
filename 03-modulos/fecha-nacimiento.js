@@ -11,22 +11,22 @@ class FechaNacimiento{
     {
         let fechaActual = new Date()
         let edad = Math.floor(((fechaActual - this.fecha) / (1000 * 60 * 60 * 24) / 365));
-        console.log(edad)
+        return edad
     }
     getFormatoCorto()
     {
-        console.log(`${this.dia}/${this.mes}/${this.año}`)
+        return (`${this.dia}/${this.mes}/${this.año}`)
     }
     getFormatoExtendido()
     {
         let dia = this.fecha.getDay()
         let semana = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado","domingo"]
         let mes = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
-        console.log(semana[dia]+" "+this.dia+" de "+mes[this.mes]+" del "+this.año)
+        return (semana[dia]+" "+this.dia+" de "+mes[this.mes]+" del "+this.año)
         
     }
 }
 let pepe = new FechaNacimiento(6,3,2000)
-pepe.getEdad();
-pepe.getFormatoCorto()
-pepe.getFormatoExtendido()
+console.log(pepe.getEdad())
+console.log(pepe.getFormatoCorto())
+console.log(pepe.getFormatoExtendido())
