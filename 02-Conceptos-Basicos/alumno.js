@@ -10,10 +10,17 @@ class Alumno {
     -se ejecuta de maneara automatica al crear un 
     objeto o una instancia de la clase (new)
 */
+/**
+ * 
+ * @param {string} nombre Nombre del alumno
+ * @param {number} numero Numero de cuenta
+ * @param {Sate} fecha Fecha de nacimiento
+ */
     constructor(nombre,noCuenta,fecha) {
         this.nombre = nombre
         this.noCuenta = noCuenta
         this.fecha = fecha
+        this.fechaAlta = new Date()
         console.log("El objeto se ha inicializado")
     }
 
@@ -36,6 +43,10 @@ class Alumno {
         console.log(`   ~ Nombre = ${this.nombre}`)
         console.log(`   ~ No. de cuenta = ${this.noCuenta}`)
         console.log(`   ~ Fecha de nacimiento = ${this.fecha}`)
+        console.log(`   ~ Fecha dada de alta = ${this.fechaAlta}`)
+    }
+    saludar(persona2){
+        console.log(` ${this.nombre} Saluda a ${persona2.nombre}`)
     }
 }
 /*
@@ -44,8 +55,8 @@ class Alumno {
 -El operador new se utiliza para crear un nuevo
 objeto o una nueva instancia de una clase
 */
-let alumno1 = new Alumno("pepe","20161012",new Date (2002, 3, 17))
-let alumno2 = new Alumno("juan","20145754",new Date (2000, 1, 1))
+let alumno1 = new Alumno("pepe",20161012,new Date (2002, 3, 17))
+let alumno2 = new Alumno("juan",20145754,new Date (2000, 1, 1))
 
 alumno1.decirHola()
 alumno1.mostrarPerfil()
@@ -54,3 +65,6 @@ alumno1.decirAdios()
 alumno2.decirHola()
 alumno2.mostrarPerfil()
 alumno2.decirAdios()
+
+alumno1.saludar(alumno2)
+alumno2.saludar(alumno1)
