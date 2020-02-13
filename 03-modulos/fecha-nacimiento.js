@@ -1,4 +1,4 @@
-class FechaNacimiento{
+export default class FechaNacimiento{
     constructor(dia,mes,año)
     {
     this.dia = dia
@@ -26,7 +26,3 @@ class FechaNacimiento{
         
     }
 }
-let pepe = new FechaNacimiento(6,3,2000)
-console.log(pepe.getEdad())
-console.log(pepe.getFormatoCorto())
-console.log(pepe.getFormatoExtendido())
