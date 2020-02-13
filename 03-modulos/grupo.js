@@ -10,8 +10,8 @@ export default class Grupo{
     }
 
     listarAlumnos(){
-        this.alumnos.forEach( alumno => {
-            console.log(alumno.getPerfil())
+        this.alumnos.forEach( (alumno, i) => {
+            console.log(`(${i+1}) ${alumno.getPerfil()}`)
         })
     }
     elimarAlumno(alumno){
